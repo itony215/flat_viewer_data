@@ -1,1 +1,146 @@
-[{"ask":{"raw":"34.05","fmt":"34.05","sort":34.05},"bid":{"raw":"34","fmt":"34.00","sort":34},"change":{"raw":"-0.1","fmt":"-0.10","sort":-0.1},"changePercent":"-0.29%","changeStatus":"equal","exchange":"TWO","holdingType":"EQUITY","limitDown":false,"limitDownPrice":{"raw":"30.7","fmt":"30.70","sort":30.7},"limitUp":false,"limitUpPrice":{"raw":"37.5","fmt":"37.50","sort":37.5},"marketStatus":"close","messageBoardId":"finmb_20343715_lang_zh","previousVolume":"46000","price":{"raw":"34","fmt":"34.00","sort":34},"regularMarketDayHigh":{"raw":"34.6","fmt":"34.60","sort":34.6},"regularMarketDayLow":{"raw":"33.8","fmt":"33.80","sort":33.8},"regularMarketOpen":{"raw":"34","fmt":"34.00","sort":34},"regularMarketPreviousClose":{"raw":"34.1","fmt":"34.10","sort":34.1},"regularMarketTime":"2023-12-20T05:30:00Z","relatedSymbol":null,"relatedSymbolName":null,"sectorId":"154","sectorName":"櫃電腦週邊","symbol":"3272.TWO","symbolName":"東碩","systexId":"3272","turnoverM":"2.737","volume":"80000","currency":"TWD","epsTrailingTwelveMonths":null,"exchangeDataDelayedBy":null,"fiftyTwoWeekHigh":null,"fiftyTwoWeekLow":null,"marketCap":null,"marketState":null,"trailingPE":null,"avgPrice":"34.20","inMarket":49,"outMarket":31,"orderbook":[{"ask":"34.05","askVol":3000,"bid":"34.00","bidVol":4000,"askVolK":3,"bidVolK":4},{"ask":"34.10","askVol":1000,"bid":"33.95","bidVol":2000,"askVolK":1,"bidVolK":2},{"ask":"34.20","askVol":3000,"bid":"33.90","bidVol":1000,"askVolK":3,"bidVolK":1},{"ask":"34.30","askVol":7000,"bid":"33.85","bidVol":5000,"askVolK":7,"bidVolK":5},{"ask":"34.45","askVol":1000,"bid":"33.80","bidVol":10000,"askVolK":1,"bidVolK":10}],"previousVolumeK":46,"volumeK":80,"totalMarketVolK":80,"inMarketPercentage":"61.25%","outMarketPercentage":"38.75%","sumAskVolK":15,"sumBidVolK":22}]
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <title>Yahoo</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimal-ui">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <style>
+      html {
+          height: 100%;
+      }
+      body {
+          background: #fafafc url(https://s.yimg.com/nn/img/sad-panda-201402200631.png) 50% 50%;
+          background-size: cover;
+          height: 100%;
+          text-align: center;
+          font: 300 18px "helvetica neue", helvetica, verdana, tahoma, arial, sans-serif;
+          margin: 0;
+      }
+      table {
+          height: 100%;
+          width: 100%;
+          table-layout: fixed;
+          border-collapse: collapse;
+          border-spacing: 0;
+          border: none;
+      }
+      h1 {
+          font-size: 42px;
+          font-weight: 400;
+          color: #400090;
+      }
+      p {
+          color: #1A1A1A;
+      }
+      #message-1 {
+          font-weight: bold;
+          margin: 0;
+      }
+      #message-2 {
+          display: inline-block;
+          *display: inline;
+          zoom: 1;
+          max-width: 17em;
+          _width: 17em;
+      }
+      </style>
+      <script>
+      
+      </script>
+  </head>
+  <body>
+  <!-- status code : 504 -->
+  <!-- Activity Timeout -->
+  <!-- host machine: media-router-abu7011.prod.media.tw1.yahoo.com -->
+  <!-- timestamp: 1703075407.187 -->
+  <!-- url: https://tw.stock.yahoo.com/_td-stock/api/resource/StockServices.stockList;fields=avgPrice%2Corderbook;symbols=3272-->
+  <script type="text/javascript">
+    function buildUrl(url, parameters){
+      var qs = [];
+      for(var key in parameters) {
+        var value = parameters[key];
+        qs.push(encodeURIComponent(key) + "=" + encodeURIComponent(value));
+      }
+      url = url + "?" + qs.join('&');
+      return url;
+    }
+
+    function generateBRBMarkup(site) {
+      params.source = 'brb';
+      generateBeaconMarkup(params);
+      var englishHeader = 'Will be right back...';
+      var englishMessage1 = 'Thank you for your patience.';
+      var englishMessage2 = 'Our engineers are working quickly to resolve the issue.';
+      var defaultLogoStyle = '';
+      var siteDataMap = {
+        'default': {
+          logo: 'https://s.yimg.com/rz/p/yahoo_frontpage_en-US_s_f_p_205x58_frontpage.png',
+          logoAlt: 'Yahoo Logo',
+          logoStyle: defaultLogoStyle,
+          header: englishHeader,
+          message1: englishMessage1,
+          message2: englishMessage2
+        }
+      };
+
+      var siteDetails = siteDataMap['default'];
+
+      document.write('<table><tbody><tr><td>');
+      document.write('<div id="content">');
+      document.write('<img src="' + siteDetails['logo'] + '" alt="' + siteDetails['logoAlt'] + '" style="' + siteDetails['logoStyle'] + '">');
+      document.write('<h1 style="margin-top:20px;">' + siteDetails['header'] + '</h1>');
+      document.write('<p id="message-1">' + siteDetails['message1'] + '</p>');
+      document.write('<p id="message-2">' + siteDetails['message2'] + '</p>');
+      document.write('</div>');
+      document.write('</td></tr></tbody></table>');
+    }
+
+    function generateBeaconMarkup(params) {
+        document.write('<img src="' + buildUrl('//geo.yahoo.com/b', params) + '" style="display:none;" width="0px" height="0px"/>');
+        var beacon = new Image();
+        beacon.src = buildUrl('//bcn.fp.yahoo.com/p', params);
+    }
+
+    var hostname = window.location.hostname;
+    var device = 'desktop';
+    var ynet = ('-' === '1');
+    var prid = '0r8p4ilio5nif';
+    var crid = '0r8p4ilio5nif';
+    var time = new Date().getTime();
+    var params = {
+        s: '1197757129',
+        t: time,
+        err_url: document.URL,
+        err: '504',
+        test: '-',
+        ats_host: 'media-router-abu7011.prod.media.tw1.yahoo.com',
+        prid: prid,
+        crid: crid,
+        message: 'Activity Timeout'
+    };
+
+    if(ynet) {
+        document.write('<div style="height: 5px; background-color: red;"></div>');
+    }
+    generateBRBMarkup(hostname, params);
+
+  </script>
+  <noscript>
+  <table>
+    <tbody>
+      <tr>
+        <td>
+          <div id="englishContent">
+            <h1 style="margin-top:20px;">Will be right back...</h1>
+            <p id="message-1">Thank you for your patience.</p>
+            <p id="message-2">Our engineers are working quickly to resolve the issue.</p>
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  </noscript>
+  </body>
+</html>
